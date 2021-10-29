@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "env-var": "^7.1.1",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.0.0",
+    "pg": "^8.7.1"
+  },
+  "scripts": {
+    "dev": "nodemon -r dotenv/config ./server/index.js",
+    "db:mk": "node -r dotenv/config ./db/scripts/createTable.js",
+    "db:rm": "node -r dotenv/config ./db/scripts/dropTable.js",
+    "db:pop": "node -r dotenv/config ./db/scripts/populateTable.js",
+    "db:rs": "npm run db:rm && npm run db:mk && npm run db:pop"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^8.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1"
+  },
+  "type": "module"
+}
