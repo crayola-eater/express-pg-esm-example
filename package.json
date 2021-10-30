@@ -16,9 +16,11 @@
     "db:mk": "node -r dotenv/config ./db/scripts/createTable.js",
     "db:rm": "node -r dotenv/config ./db/scripts/dropTable.js",
     "db:pop": "node -r dotenv/config ./db/scripts/populateTable.js",
-    "db:rs": "npm run db:rm && npm run db:mk && npm run db:pop"
+    "db:rs": "npm run db:rm && npm run db:mk && npm run db:pop",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.2",
     "dotenv": "^10.0.0",
     "eslint": "^8.1.0",
     "eslint-plugin-promise": "^5.1.1",
