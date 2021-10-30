@@ -17,7 +17,7 @@
     "db:rm": "node -r dotenv/config ./db/scripts/dropTable.js",
     "db:pop": "node -r dotenv/config ./db/scripts/populateTable.js",
     "db:rs": "npm run db:rm && npm run db:mk && npm run db:pop",
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
